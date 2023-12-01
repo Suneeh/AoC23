@@ -5,5 +5,5 @@ This year I will give it a shot and try to solve every single problem in TypeScr
 Run my solutions with
 
 ```bash
-npx ts-node src/1/index.ts
+npx ts-node src/1.1/index.ts
 ```
