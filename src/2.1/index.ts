@@ -1,11 +1,6 @@
 import { realData, testData } from "./testdata";
 
-function solve(
-  data: string[],
-  red: number,
-  green: number,
-  blue: number
-): number {
+function solve(data: string[]): number {
   let sumPossibleGames: number = 0;
   data.forEach((gameString, gameNr) => {
     let gameIsPossible: boolean = true;
@@ -15,9 +10,9 @@ function solve(
       values.forEach((value) => {
         let numberColor = value.split(" ");
         if (
-          (numberColor[1] === "blue" && +numberColor[0] > blue) ||
-          (numberColor[1] === "green" && +numberColor[0] > green) ||
-          (numberColor[1] === "red" && +numberColor[0] > red)
+          (numberColor[1] === "blue" && +numberColor[0] > 14) ||
+          (numberColor[1] === "green" && +numberColor[0] > 13) ||
+          (numberColor[1] === "red" && +numberColor[0] > 12)
         ) {
           gameIsPossible = false;
         }
@@ -30,5 +25,5 @@ function solve(
   return sumPossibleGames;
 }
 
-console.log(solve(testData, 12, 13, 14));
-console.log(solve(realData, 12, 13, 14));
+console.log(solve(testData));
+console.log(solve(realData));
