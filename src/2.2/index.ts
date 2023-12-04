@@ -2,7 +2,7 @@ import { realData, testData } from "./testdata";
 
 function solve(data: string[]): number {
   let sumPowerOfGames: number = 0;
-  data.forEach((gameString, gameNr) => {
+  data.forEach((gameString) => {
     let minRed: number = 0;
     let minGreen: number = 0;
     let minBlue: number = 0;
