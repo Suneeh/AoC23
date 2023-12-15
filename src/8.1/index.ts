@@ -13,10 +13,10 @@ function solve(data: string[]): number {
   // Preparing Dictionary for the Map
   let map: map = {};
   data.map((line) => {
-    let point = line.split("=")[0].trim();
-    let l = first(line.match(/\((.*),/))?.slice(1, 4);
-    let r = first(line.match(/,(.*)\)/))?.slice(2, 5);
-    if (l && r) return (map[point] = { L: l, R: r });
+    let grouping = line.match(/(\w{3}) = \((\w{3}), (\w{3})\)/);
+    if (grouping) {
+      return (map[grouping[1]] = { L: grouping[2], R: grouping[3] });
+    }
   });
 
   let steps: number = 0;
