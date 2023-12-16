@@ -1,5 +1,4 @@
 import { realData, testData, testData2 } from "./testdata";
-import { first, last } from "lodash";
 
 interface mapEntry {
   L: string;
